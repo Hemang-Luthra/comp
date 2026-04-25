@@ -116,7 +116,6 @@
     to { opacity: 1; transform: translateY(0); }
   }
 
-  /* ===== PAGE 1: HOME ===== */
   .hero {
     min-height: calc(100vh - 80px);
     display: grid; grid-template-columns: 1fr 1fr;
@@ -377,7 +376,6 @@
   .step-title { font-weight: 700; font-size: 1.1rem; margin-bottom: 0.5rem; }
   .step-desc { font-size: 0.88rem; color: var(--text-muted); line-height: 1.7; }
 
-  /* ===== PAGE 2: FEATURES ===== */
   .features-hero {
     padding: 5rem 4rem 3rem;
     background: var(--charcoal);
@@ -398,7 +396,7 @@
     gap: 1.5rem; padding: 4rem;
     background: var(--ivory);
   }
-  .feature-card {
+  .fc {
     background: white;
     border-radius: 20px;
     padding: 2rem;
@@ -406,7 +404,7 @@
     transition: all 0.35s cubic-bezier(0.34,1.56,0.64,1);
     cursor: default; position: relative; overflow: hidden;
   }
-  .feature-card::before {
+  .fc::before {
     content: '';
     position: absolute; top: 0; left: 0; right: 0;
     height: 3px;
@@ -414,8 +412,8 @@
     transform: scaleX(0); transform-origin: left;
     transition: transform 0.3s;
   }
-  .feature-card:hover { transform: translateY(-8px); box-shadow: 0 20px 50px rgba(26,26,46,0.12); }
-  .feature-card:hover::before { transform: scaleX(1); }
+  .fc:hover { transform: translateY(-8px); box-shadow: 0 20px 50px rgba(26,26,46,0.12); }
+  .fc:hover::before { transform: scaleX(1); }
   .feature-icon {
     width: 60px; height: 60px; border-radius: 16px;
     background: var(--blush);
@@ -423,7 +421,7 @@
     font-size: 1.8rem; margin-bottom: 1.5rem;
     transition: transform 0.3s;
   }
-  .feature-card:hover .feature-icon { transform: scale(1.1) rotate(-5deg); }
+  .fc:hover .feature-icon { transform: scale(1.1) rotate(-5deg); }
   .feature-title { font-weight: 700; font-size: 1.05rem; margin-bottom: 0.6rem; }
   .feature-desc { font-size: 0.87rem; color: var(--text-muted); line-height: 1.7; }
   .feature-tag {
@@ -494,18 +492,18 @@
     50% { box-shadow: 0 0 0 16px rgba(0,255,127,0); }
   }
   .safe-text { color: #00ff7f; font-size: 0.8rem; font-weight: 600; }
-  .app-contacts {
+  .app-baateins {
     margin: 0 20px;
     display: flex; flex-direction: column; gap: 8px;
   }
-  .contact-item {
+  .baatein-item {
     background: rgba(255,255,255,0.05);
     border-radius: 10px;
     padding: 10px 14px;
     display: flex; align-items: center; gap: 10px;
     font-size: 0.75rem; color: rgba(255,255,255,0.8);
   }
-  .contact-avatar {
+  .baatein-avatar {
     width: 28px; height: 28px; border-radius: 50%;
     background: var(--crimson); display: flex;
     align-items: center; justify-content: center;
@@ -525,7 +523,6 @@
     50% { box-shadow: 0 0 0 12px rgba(193,18,31,0); }
   }
 
-  /* ===== PAGE 3: NETWORK ===== */
   .network-hero {
     padding: 5rem 4rem 3rem;
     background: var(--midnight);
@@ -558,26 +555,26 @@
   .network-stats {
     display: flex; flex-direction: column; gap: 1.5rem;
   }
-  .n-stat {
+  .lol {
     display: flex; align-items: center; gap: 1.5rem;
     padding: 1.5rem;
     background: white; border-radius: 16px;
     border: 1px solid rgba(26,26,46,0.06);
     transition: all 0.3s; cursor: default;
   }
-  .n-stat:hover { border-color: var(--crimson); transform: translateX(6px); }
-  .n-stat-icon {
+  .lol:hover { border-color: var(--crimson); transform: translateX(6px); }
+  .lol-icon {
     width: 52px; height: 52px; border-radius: 14px;
     background: var(--charcoal); flex-shrink: 0;
     display: flex; align-items: center; justify-content: center;
     font-size: 1.4rem;
   }
-  .n-stat-num {
+  .lol-num {
     font-family: 'Playfair Display', serif;
     font-size: 2rem; font-weight: 900;
     color: var(--crimson);
   }
-  .n-stat-label { font-size: 0.85rem; color: var(--text-muted); }
+  .lol-label { font-size: 0.85rem; color: var(--text-muted); }
 
   /* VOLUNTEER SECTION */
   .volunteer-section {
@@ -613,7 +610,6 @@
     padding: 3px 10px; border-radius: 50px;
   }
 
-  /* ===== PAGE 4: SOS ===== */
   .sos-page {
     background: var(--charcoal);
     min-height: calc(100vh - 80px);
@@ -722,44 +718,43 @@
     border-color: var(--crimson);
     transform: translateY(-4px);
   }
-  .qa-icon { font-size: 2rem; margin-bottom: 0.6rem; }
-  .qa-label { font-weight: 600; font-size: 0.9rem; }
-  .qa-desc { font-size: 0.78rem; color: rgba(255,255,255,0.4); margin-top: 4px; }
+  .fdsfaicon { font-size: 2rem; margin-bottom: 0.6rem; }
+  .fdsfalabel { font-weight: 600; font-size: 0.9rem; }
+  .fdsfadesc { font-size: 0.78rem; color: rgba(255,255,255,0.4); margin-top: 4px; }
 
-  /* ===== PAGE 5: CONTACT ===== */
-  .contact-section {
+  .baatein-section {
     padding: 5rem 4rem;
     background: white;
     display: grid; grid-template-columns: 1fr 1fr;
     gap: 5rem; min-height: calc(100vh - 80px);
     align-items: center;
   }
-  .contact-info h1 {
+  .baatein-info h1 {
     font-family: 'Playfair Display', serif;
     font-size: clamp(2rem, 3.5vw, 3rem);
     font-weight: 900; color: var(--charcoal);
     margin-bottom: 1.2rem; line-height: 1.2;
   }
-  .contact-info p { color: var(--text-muted); line-height: 1.8; margin-bottom: 2.5rem; }
-  .contact-details { display: flex; flex-direction: column; gap: 1.2rem; }
-  .contact-item-row {
+  .baatein-info p { color: var(--text-muted); line-height: 1.8; margin-bottom: 2.5rem; }
+  .baatein-details { display: flex; flex-direction: column; gap: 1.2rem; }
+  .baatein-item-row {
     display: flex; gap: 1rem; align-items: center;
     padding: 1rem 1.2rem;
     border-radius: 12px;
     border: 1px solid rgba(26,26,46,0.06);
     transition: all 0.3s; cursor: default;
   }
-  .contact-item-row:hover { border-color: var(--crimson); transform: translateX(4px); }
+  .baatein-item-row:hover { border-color: var(--crimson); transform: translateX(4px); }
   .ci-icon { font-size: 1.3rem; }
   .ci-label { font-size: 0.78rem; color: var(--text-muted); }
   .ci-value { font-weight: 600; font-size: 0.95rem; }
 
-  .contact-form {
+  .baatein-form {
     background: var(--ivory);
     border-radius: 24px;
     padding: 2.5rem;
   }
-  .contact-form h2 {
+  .baatein-form h2 {
     font-family: 'Playfair Display', serif;
     font-size: 1.6rem; font-weight: 700;
     margin-bottom: 1.8rem; color: var(--charcoal);
@@ -914,11 +909,10 @@
     <li><a href="#" onclick="showPage('features',this)">Features</a></li>
     <li><a href="#" onclick="showPage('network',this)">Network</a></li>
     <li><a href="#" onclick="showPage('sos',this)">SOS System</a></li>
-    <li><a href="#" onclick="showPage('contact',this)" class="nav-cta">Join Now</a></li>
+    <li><a href="#" onclick="showPage('baatein',this)" class="nav-cta">Join Now</a></li>
   </ul>
 </nav>
 
-<!-- ========== HOME PAGE ========== -->
 <div id="page-home" class="page active">
   <section class="hero">
     <div class="hero-bg-circle"></div>
@@ -1053,7 +1047,7 @@
           <div class="mc-icon">📍</div>
           <div>
             <div class="mc-title">Real-Time Location Tracking</div>
-            <div class="mc-desc">Share your live location with trusted contacts during commutes, late nights, or emergencies with one tap.</div>
+            <div class="mc-desc">Share your live location with trusted baateins during commutes, late nights, or emergencies with one tap.</div>
           </div>
         </div>
         <div class="mission-card reveal reveal-delay-1">
@@ -1108,7 +1102,7 @@
         <div class="step-num">01</div>
         <div class="step-icon">📱</div>
         <div class="step-title">Register & Setup</div>
-        <div class="step-desc">Create your profile, add trusted emergency contacts, and configure your safety preferences and alert thresholds.</div>
+        <div class="step-desc">Create your profile, add trusted emergency baateins, and configure your safety preferences and alert thresholds.</div>
       </div>
       <div class="step-card reveal reveal-delay-1">
         <div class="step-num">02</div>
@@ -1120,7 +1114,7 @@
         <div class="step-num">03</div>
         <div class="step-icon">🆘</div>
         <div class="step-title">Instant SOS Response</div>
-        <div class="step-desc">One press sends your location to contacts, nearby volunteers, and emergency services simultaneously. Help arrives fast.</div>
+        <div class="step-desc">One press sends your location to baateins, nearby volunteers, and emergency services simultaneously. Help arrives fast.</div>
       </div>
     </div>
   </section>
@@ -1152,7 +1146,7 @@
         <h4>Support</h4>
         <ul>
           <li><a href="#">Help Center</a></li>
-          <li><a href="#" onclick="showPage('contact',null)">Contact</a></li>
+          <li><a href="#" onclick="showPage('baatein',null)">baatein</a></li>
           <li><a href="#">Privacy Policy</a></li>
           <li><a href="#">Terms</a></li>
         </ul>
@@ -1165,7 +1159,6 @@
   </footer>
 </div>
 
-<!-- ========== FEATURES PAGE ========== -->
 <div id="page-features" class="page">
   <section class="features-hero">
     <div class="section-tag" style="color:var(--gold);">Platform Features</div>
@@ -1174,58 +1167,58 @@
   </section>
 
   <div class="features-grid">
-    <div class="feature-card reveal">
+    <div class="fc reveal">
       <div class="feature-icon">📡</div>
       <div class="feature-title">Live GPS Tracking</div>
-      <div class="feature-desc">Real-time location sharing with trusted contacts. Auto-updates every 30 seconds. Works even in low-signal areas using satellite backup.</div>
+      <div class="feature-desc">Real-time location sharing with trusted baateins. Auto-updates every 30 seconds. Works even in low-signal areas using satellite backup.</div>
       <span class="feature-tag">Core Safety</span>
     </div>
-    <div class="feature-card reveal reveal-delay-1">
+    <div class="fc reveal reveal-delay-1">
       <div class="feature-icon">🚨</div>
       <div class="feature-title">One-Touch SOS</div>
-      <div class="feature-desc">Triple-press power button or use the in-app button. Alerts are dispatched to all emergency contacts and nearby volunteers within 3 seconds.</div>
+      <div class="feature-desc">Triple-press power button or use the in-app button. Alerts are dispatched to all emergency baateins and nearby volunteers within 3 seconds.</div>
       <span class="feature-tag">Emergency</span>
     </div>
-    <div class="feature-card reveal reveal-delay-2">
+    <div class="fc reveal reveal-delay-2">
       <div class="feature-icon">🤖</div>
       <div class="feature-title">AI Risk Assessment</div>
       <div class="feature-desc">Machine learning analyzes time, location, historical incident data, and crowd patterns to provide proactive safety scores for your route.</div>
       <span class="feature-tag">AI Powered</span>
     </div>
-    <div class="feature-card reveal">
+    <div class="fc reveal">
       <div class="feature-icon">🎙️</div>
       <div class="feature-title">Silent Voice Activation</div>
-      <div class="feature-desc">Activate SOS with a secret voice command. The app quietly records audio evidence and streams it to your contacts without alerting anyone nearby.</div>
+      <div class="feature-desc">Activate SOS with a secret voice command. The app quietly records audio evidence and streams it to your baateins without alerting anyone nearby.</div>
       <span class="feature-tag">Discreet</span>
     </div>
-    <div class="feature-card reveal reveal-delay-1">
+    <div class="fc reveal reveal-delay-1">
       <div class="feature-icon">🗺️</div>
       <div class="feature-title">Community Safety Map</div>
       <div class="feature-desc">Crowdsourced incident reports create a live heat map of risk zones. Avoid danger before you encounter it with smart route suggestions.</div>
       <span class="feature-tag">Community</span>
     </div>
-    <div class="feature-card reveal reveal-delay-2">
+    <div class="fc reveal reveal-delay-2">
       <div class="feature-icon">👥</div>
       <div class="feature-title">Trusted Circle</div>
-      <div class="feature-desc">Build your personal safety network of up to 15 trusted contacts with tiered alert levels and custom notification preferences.</div>
+      <div class="feature-desc">Build your personal safety network of up to 15 trusted baateins with tiered alert levels and custom notification preferences.</div>
       <span class="feature-tag">Network</span>
     </div>
-    <div class="feature-card reveal">
+    <div class="fc reveal">
       <div class="feature-icon">🏥</div>
       <div class="feature-title">Emergency Services Link</div>
       <div class="feature-desc">Direct API integration with local police and hospitals. Automatically shares your medical profile and location with first responders.</div>
       <span class="feature-tag">Official</span>
     </div>
-    <div class="feature-card reveal reveal-delay-1">
+    <div class="fc reveal reveal-delay-1">
       <div class="feature-icon">🔐</div>
       <div class="feature-title">End-to-End Encryption</div>
       <div class="feature-desc">All data is encrypted with military-grade AES-256. Your location and personal data are never sold or shared without your explicit consent.</div>
       <span class="feature-tag">Privacy</span>
     </div>
-    <div class="feature-card reveal reveal-delay-2">
+    <div class="fc reveal reveal-delay-2">
       <div class="feature-icon">🚌</div>
       <div class="feature-title">Smart Journey Mode</div>
-      <div class="feature-desc">Set a destination and expected arrival time. If you don't check in safely, your contacts are automatically notified and help is dispatched.</div>
+      <div class="feature-desc">Set a destination and expected arrival time. If you don't check in safely, your baateins are automatically notified and help is dispatched.</div>
       <span class="feature-tag">Proactive</span>
     </div>
   </div>
@@ -1240,7 +1233,7 @@
           <span style="font-size:1.4rem;">⚡</span>
           <div>
             <div style="font-weight:600;font-size:0.9rem;">3-Second Alert Dispatch</div>
-            <div style="font-size:0.82rem;color:var(--text-muted);">From button press to all contacts notified</div>
+            <div style="font-size:0.82rem;color:var(--text-muted);">From button press to all baateins notified</div>
           </div>
         </div>
         <div style="display:flex;gap:1rem;align-items:center;padding:1rem;border-radius:12px;border:1px solid rgba(26,26,46,0.06);">
@@ -1275,17 +1268,17 @@
             <div style="font-size:0.7rem;color:rgba(255,255,255,0.4);margin-top:4px;">Last update: Just now</div>
           </div>
           <div style="padding:0 20px;font-size:0.72rem;color:rgba(255,255,255,0.4);margin-bottom:8px;font-weight:600;letter-spacing:1px;">TRUSTED CIRCLE</div>
-          <div class="app-contacts">
-            <div class="contact-item">
-              <div class="contact-avatar">MA</div>
+          <div class="app-baateins">
+            <div class="baatein-item">
+              <div class="baatein-avatar">MA</div>
               <div>
                 <div style="font-weight:600;">Mom</div>
                 <div style="font-size:0.65rem;color:rgba(255,255,255,0.4);">Online · 0.3 km away</div>
               </div>
               <div style="margin-left:auto;font-size:0.65rem;color:#00ff7f;">●</div>
             </div>
-            <div class="contact-item">
-              <div class="contact-avatar" style="background:#0F3460;">RS</div>
+            <div class="baatein-item">
+              <div class="baatein-avatar" style="background:#0F3460;">RS</div>
               <div>
                 <div style="font-weight:600;">Riya Singh</div>
                 <div style="font-size:0.65rem;color:rgba(255,255,255,0.4);">Volunteer · 1.2 km</div>
@@ -1303,14 +1296,13 @@
       <div><div class="footer-logo">ShieldHer</div><div class="footer-about">A women safety smart network.</div></div>
       <div class="footer-col"><h4>Platform</h4><ul><li><a href="#" onclick="showPage('features',null)">Features</a></li><li><a href="#" onclick="showPage('sos',null)">SOS</a></li></ul></div>
       <div class="footer-col"><h4>Community</h4><ul><li><a href="#">Volunteer</a></li><li><a href="#">Partners</a></li></ul></div>
-      <div class="footer-col"><h4>Support</h4><ul><li><a href="#" onclick="showPage('contact',null)">Contact</a></li><li><a href="#">Help</a></li></ul></div>
+      <div class="footer-col"><h4>Support</h4><ul><li><a href="#" onclick="showPage('baatein',null)">baatein</a></li><li><a href="#">Help</a></li></ul></div>
     </div>
     <div class="footer-bottom"><span>© 2026 ShieldHer</span><span>🛡️ Protecting Women.</span></div>
   </footer>
 </div>
 
-<!-- ========== NETWORK PAGE ========== -->
-<div id="page-network" class="page">
+<div id="pnwork" class="page">
   <section class="network-hero">
     <div class="section-tag" style="color:var(--gold);">The Network</div>
     <h1>A living web of protection</h1>
@@ -1322,38 +1314,38 @@
       <canvas id="networkCanvas" width="500" height="500"></canvas>
     </div>
     <div class="network-stats">
-      <div class="n-stat reveal">
-        <div class="n-stat-icon">🌐</div>
+      <div class="lol reveal">
+        <div class="lol-icon">🌐</div>
         <div>
-          <div class="n-stat-num" id="countNodes">0</div>
-          <div class="n-stat-label">Active Network Nodes</div>
+          <div class="lol-num" id="countNodes">0</div>
+          <div class="lol-label">Active Network Nodes</div>
         </div>
       </div>
-      <div class="n-stat reveal reveal-delay-1">
-        <div class="n-stat-icon">🚨</div>
+      <div class="lol reveal reveal-delay-1">
+        <div class="lol-icon">🚨</div>
         <div>
-          <div class="n-stat-num" id="countAlerts">0</div>
-          <div class="n-stat-label">Alerts Resolved This Month</div>
+          <div class="lol-num" id="countAlerts">0</div>
+          <div class="lol-label">Alerts Resolved This Month</div>
         </div>
       </div>
-      <div class="n-stat reveal reveal-delay-2">
-        <div class="n-stat-icon">🤝</div>
+      <div class="lol reveal reveal-delay-2">
+        <div class="lol-icon">🤝</div>
         <div>
-          <div class="n-stat-num" id="countVols">0</div>
-          <div class="n-stat-label">Verified Volunteers</div>
+          <div class="lol-num" id="countVols">0</div>
+          <div class="lol-label">Verified Volunteers</div>
         </div>
       </div>
-      <div class="n-stat reveal reveal-delay-3">
-        <div class="n-stat-icon">🏙️</div>
+      <div class="lol reveal reveal-delay-3">
+        <div class="lol-icon">🏙️</div>
         <div>
-          <div class="n-stat-num" id="countCities">0</div>
-          <div class="n-stat-label">Cities Active</div>
+          <div class="lol-num" id="countCities">0</div>
+          <div class="lol-label">Cities Active</div>
         </div>
       </div>
       <p style="color:var(--text-muted);font-size:0.87rem;line-height:1.7;" class="reveal">
         The ShieldHer network grows stronger with every member. Real-time data sharing between nodes creates an intelligent mesh that can predict and prevent unsafe situations before they escalate.
       </p>
-      <a href="#" onclick="showPage('contact',null)" class="btn-primary" style="width:fit-content;">Join the Network →</a>
+      <a href="#" onclick="showPage('baatein',null)" class="btn-primary" style="width:fit-content;">Join the Network →</a>
     </div>
   </section>
 
@@ -1387,7 +1379,7 @@
       </div>
     </div>
     <div style="text-align:center;margin-top:2.5rem;">
-      <a href="#" onclick="showPage('contact',null)" class="btn-primary">Become a Volunteer →</a>
+      <a href="#" onclick="showPage('baatein',null)" class="btn-primary">Become a Volunteer →</a>
     </div>
   </section>
 
@@ -1414,13 +1406,12 @@
       <div><div class="footer-logo">ShieldHer</div><div class="footer-about">A women safety smart network.</div></div>
       <div class="footer-col"><h4>Platform</h4><ul><li><a href="#" onclick="showPage('features',null)">Features</a></li></ul></div>
       <div class="footer-col"><h4>Community</h4><ul><li><a href="#">Volunteer</a></li></ul></div>
-      <div class="footer-col"><h4>Support</h4><ul><li><a href="#" onclick="showPage('contact',null)">Contact</a></li></ul></div>
+      <div class="footer-col"><h4>Support</h4><ul><li><a href="#" onclick="showPage('baatein',null)">baatein</a></li></ul></div>
     </div>
     <div class="footer-bottom"><span>© 2026 ShieldHer</span><span>🛡️ Protecting Women.</span></div>
   </footer>
 </div>
 
-<!-- ========== SOS PAGE ========== -->
 <div id="page-sos" class="page">
   <section class="sos-page">
     <div class="sos-header">
@@ -1452,7 +1443,7 @@
         <div class="alert-item">
           <div class="alert-dot safe"></div>
           <div>
-            <div class="alert-text">Network check-in confirmed — All 3 trusted contacts are reachable</div>
+            <div class="alert-text">Network check-in confirmed — All 3 trusted baateins are reachable</div>
             <div class="alert-time">Just now</div>
           </div>
         </div>
@@ -1482,54 +1473,53 @@
 
     <div class="quick-actions">
       <div class="quick-action-btn" onclick="quickAction('share')">
-        <div class="qa-icon">📍</div>
-        <div class="qa-label">Share Location</div>
-        <div class="qa-desc">Send live location to trusted circle</div>
+        <div class="fdsfaicon">📍</div>
+        <div class="fdsfalabel">Share Location</div>
+        <div class="fdsfadesc">Send live location to trusted circle</div>
       </div>
       <div class="quick-action-btn" onclick="quickAction('journey')">
-        <div class="qa-icon">🗺️</div>
-        <div class="qa-label">Start Journey</div>
-        <div class="qa-desc">Activate smart route monitoring</div>
+        <div class="fdsfaicon">🗺️</div>
+        <div class="fdsfalabel">Start Journey</div>
+        <div class="fdsfadesc">Activate smart route monitoring</div>
       </div>
       <div class="quick-action-btn" onclick="quickAction('police')">
-        <div class="qa-icon">🚔</div>
-        <div class="qa-label">Contact Police</div>
-        <div class="qa-desc">Direct line to local station</div>
+        <div class="fdsfaicon">🚔</div>
+        <div class="fdsfalabel">baatein Police</div>
+        <div class="fdsfadesc">Direct line to local station</div>
       </div>
     </div>
   </section>
 </div>
 
-<!-- ========== CONTACT PAGE ========== -->
-<div id="page-contact" class="page">
-  <section class="contact-section">
-    <div class="contact-info">
+<div id="page-baatein" class="page">
+  <section class="baatein-section">
+    <div class="baatein-info">
       <div class="section-tag">Get In Touch</div>
       <h1>Join ShieldHer. Make your community safer.</h1>
       <p>Whether you're looking to register as a user, become a volunteer, partner with us, or need support — our team is ready to help you.</p>
-      <div class="contact-details">
-        <div class="contact-item-row">
+      <div class="baatein-details">
+        <div class="baatein-item-row">
           <span class="ci-icon">📞</span>
           <div>
             <div class="ci-label">Helpline (24/7)</div>
             <div class="ci-value">1800-SHIELD-HER (Free)</div>
           </div>
         </div>
-        <div class="contact-item-row">
+        <div class="baatein-item-row">
           <span class="ci-icon">📧</span>
           <div>
             <div class="ci-label">Email Support</div>
             <div class="ci-value">support@shieldher.org</div>
           </div>
         </div>
-        <div class="contact-item-row">
+        <div class="baatein-item-row">
           <span class="ci-icon">📍</span>
           <div>
             <div class="ci-label">Headquarters</div>
             <div class="ci-value">Cyber City, Gurugram, Haryana</div>
           </div>
         </div>
-        <div class="contact-item-row">
+        <div class="baatein-item-row">
           <span class="ci-icon">⏰</span>
           <div>
             <div class="ci-label">Response Time</div>
@@ -1539,8 +1529,8 @@
       </div>
     </div>
 
-    <div class="contact-form">
-      <div id="contactFormWrap">
+    <div class="baatein-form">
+      <div id="baateinFormWrap">
         <h2>Send a Message</h2>
         <div class="form-row">
           <div class="form-group">
@@ -1604,7 +1594,7 @@
 </div>
 
 <script>
-// ===== CURSOR =====
+console.log("button clicked");
 const cursor = document.getElementById('cursor');
 const cursorRing = document.getElementById('cursor-ring');
 document.addEventListener('mousemove', e => {
@@ -1613,7 +1603,7 @@ document.addEventListener('mousemove', e => {
   cursorRing.style.left = e.clientX + 'px';
   cursorRing.style.top = e.clientY + 'px';
 });
-document.querySelectorAll('a,button,.feature-card,.mission-card,.step-card,.n-stat,.volunteer-card,.quick-action-btn,.contact-item-row').forEach(el => {
+document.querySelectorAll('a,button,.fc,.mission-card,.step-card,.lol,.volunteer-card,.quick-action-btn,.baatein-item-row').forEach(el => {
   el.addEventListener('mouseenter', () => {
     cursor.style.width = '20px'; cursor.style.height = '20px';
     cursor.style.background = 'var(--gold)';
@@ -1626,7 +1616,6 @@ document.querySelectorAll('a,button,.feature-card,.mission-card,.step-card,.n-st
   });
 });
 
-// ===== SCROLL PROGRESS =====
 window.addEventListener('scroll', () => {
   const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
   const docHeight = document.documentElement.scrollHeight - window.innerHeight;
@@ -1636,7 +1625,6 @@ window.addEventListener('scroll', () => {
   nav.classList.toggle('scrolled', scrollTop > 50);
 });
 
-// ===== PAGE NAVIGATION =====
 function showPage(pageId, linkEl) {
   document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
   document.getElementById('page-' + pageId).classList.add('active');
@@ -1648,7 +1636,6 @@ function showPage(pageId, linkEl) {
   initRevealAnimations();
 }
 
-// ===== REVEAL ON SCROLL =====
 function initRevealAnimations() {
   const reveals = document.querySelectorAll('.reveal');
   const observer = new IntersectionObserver(entries => {
@@ -1660,7 +1647,6 @@ function initRevealAnimations() {
 }
 initRevealAnimations();
 
-// ===== COUNTER ANIMATION =====
 function animateCounter(el, target, suffix) {
   const duration = 2000;
   const step = target / (duration / 16);
@@ -1672,7 +1658,6 @@ function animateCounter(el, target, suffix) {
   }, 16);
 }
 
-// Home stats
 const statsObserver = new IntersectionObserver(entries => {
   entries.forEach(e => {
     if (e.isIntersecting) {
@@ -1687,7 +1672,6 @@ const statsObserver = new IntersectionObserver(entries => {
 const statsEl = document.querySelector('.stats-row');
 if (statsEl) statsObserver.observe(statsEl);
 
-// ===== NETWORK STATS ANIMATION =====
 function animateNetworkStats() {
   setTimeout(() => {
     animateCounterEl('countNodes', 48291);
@@ -1709,7 +1693,6 @@ function animateCounterEl(id, target) {
   }, 16);
 }
 
-// ===== NETWORK CANVAS =====
 function initNetworkCanvas() {
   const canvas = document.getElementById('networkCanvas');
   if (!canvas) return;
@@ -1733,13 +1716,11 @@ function initNetworkCanvas() {
   function draw() {
     ctx.fillStyle = '#16213E';
     ctx.fillRect(0, 0, W, H);
-    // Grid
     ctx.strokeStyle = 'rgba(255,255,255,0.03)';
     ctx.lineWidth = 0.5;
     for (let x = 0; x < W; x += 30) { ctx.beginPath(); ctx.moveTo(x,0); ctx.lineTo(x,H); ctx.stroke(); }
     for (let y = 0; y < H; y += 30) { ctx.beginPath(); ctx.moveTo(0,y); ctx.lineTo(W,y); ctx.stroke(); }
 
-    // Connections
     for (let i = 0; i < nodes.length; i++) {
       for (let j = i+1; j < nodes.length; j++) {
         const dx = nodes[i].x - nodes[j].x;
@@ -1756,7 +1737,6 @@ function initNetworkCanvas() {
       }
     }
 
-    // Nodes
     nodes.forEach(n => {
       ctx.beginPath();
       ctx.arc(n.x, n.y, n.r, 0, Math.PI*2);
@@ -1785,20 +1765,19 @@ function initNetworkCanvas() {
   draw();
 }
 
-// ===== SOS SYSTEM =====
 let sosActivated = false;
 function activateSOS() {
   if (sosActivated) return;
   sosActivated = true;
   const btn = document.getElementById('sosBigBtn');
   btn.classList.add('active');
-  btn.innerHTML = '<div class="sos-big-icon">🔴</div><div>ALERT SENT</div><div style="font-size:0.65rem;font-weight:400;margin-top:4px;">Contacting network...</div>';
-  document.getElementById('sosStatusText').textContent = '⚠️ SOS ACTIVATED — Notifying contacts and emergency services';
+  btn.innerHTML = '<div class="sos-big-icon">🔴</div><div>ALERT SENT</div><div style="font-size:0.65rem;font-weight:400;margin-top:4px;">baateining network...</div>';
+  document.getElementById('sosStatusText').textContent = '⚠️ SOS ACTIVATED — Notifying baateins and emergency services';
   document.getElementById('sosStatusText').style.color = '#ff4757';
 
   const log = document.getElementById('alertLog');
   const alerts = [
-    { type: 'danger', msg: 'SOS ACTIVATED — Location broadcast to all contacts', time: 'Now' },
+    { type: 'danger', msg: 'SOS ACTIVATED — Location broadcast to all baateins', time: 'Now' },
     { type: 'warning', msg: 'Notifying: Mom (+91 98xxx) · Riya Singh · Officer Meera', time: 'Just now' },
     { type: 'safe', msg: 'Police station notified · ETA: 4 minutes', time: 'Just now' },
     { type: 'safe', msg: 'Volunteer Anjali Desai dispatched · 0.8 km away', time: 'Just now' },
@@ -1812,7 +1791,7 @@ function activateSOS() {
     }, i * 600);
   });
 
-  showToast('🚨 SOS Demo Activated — In real emergency, all contacts would be notified immediately!');
+  showToast('🚨 SOS Demo Activated — In real emergency, all baateins would be notified immediately!');
   setTimeout(() => {
     btn.innerHTML = '<div class="sos-big-icon">✅</div><div>RESOLVED</div><div style="font-size:0.65rem;font-weight:400;margin-top:4px;">Click to reset</div>';
     btn.style.background = '#0F6E56';
@@ -1834,36 +1813,33 @@ function resetSOS() {
 function quickAction(type) {
   const msgs = {
     share: '📍 Location shared with your trusted circle! They can track you in real-time.',
-    journey: '🗺️ Journey monitoring started. We\'ll alert your contacts if you don\'t arrive safely.',
+    journey: '🗺️ Journey monitoring started. We\'ll alert your baateins if you don\'t arrive safely.',
     police: '🚔 Connecting to local police station... (Demo mode — call 100 in real emergency)'
   };
   showToast(msgs[type]);
 }
 
-// ===== PHONE SOS DEMO =====
 function triggerPhoneSOS() {
   showToast('📱 Demo: SOS would alert your network immediately in a real emergency!');
 }
 
-// ===== FORM =====
 function submitForm() {
   const fname = document.getElementById('fname').value.trim();
   const email = document.getElementById('femail').value.trim();
   if (!fname || !email) {
     showToast('⚠️ Please fill in your name and email address.'); return;
   }
-  document.getElementById('contactFormWrap').style.display = 'none';
+  document.getElementById('baateinFormWrap').style.display = 'none';
   document.getElementById('formSuccess').classList.add('show');
   showToast('🛡️ Welcome to ShieldHer, ' + fname + '!');
 }
 function resetForm() {
-  document.getElementById('contactFormWrap').style.display = 'block';
+  document.getElementById('baateinFormWrap').style.display = 'block';
   document.getElementById('formSuccess').classList.remove('show');
   ['fname','lname','femail','fphone','fmessage'].forEach(id => document.getElementById(id).value = '');
   document.getElementById('finterest').selectedIndex = 0;
 }
 
-// ===== TOAST =====
 let toastTimer;
 function showToast(msg) {
   clearTimeout(toastTimer);
